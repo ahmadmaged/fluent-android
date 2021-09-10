@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Fluent</string>
+    <string name="crash_message">Application crashed. Please send crash report.</string>
 </resources>
