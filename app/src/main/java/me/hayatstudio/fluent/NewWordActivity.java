@@ -1,10 +1,11 @@
 package me.hayatstudio.fluent;
 
-import android.app.Activity;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class NewWordActivity
-    extends Activity
+    extends AppCompatActivity
 {
     @Override
     protected void onCreate(Bundle savedInstanceState)

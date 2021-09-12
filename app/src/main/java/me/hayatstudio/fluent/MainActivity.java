@@ -1,12 +1,13 @@
 package me.hayatstudio.fluent;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class MainActivity
-    extends Activity
+    extends AppCompatActivity
 {
     @Override
     protected void onCreate(Bundle savedInstanceState)
