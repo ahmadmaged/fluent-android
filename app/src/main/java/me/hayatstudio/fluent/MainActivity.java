@@ -16,7 +16,7 @@ public class MainActivity
         setContentView(R.layout.activity_main);
     }
 
-    public void newWordButton(View view)
+    public void addWordsAction(View view)
     {
         Intent intent = new Intent(this, NewWordActivity.class);
         startActivity(intent);
