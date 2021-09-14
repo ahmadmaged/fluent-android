@@ -6,4 +6,7 @@
     <string name="word">Word</string>
     <string name="meaning">Meaning</string>
     <string name="add_word">Add Word</string>
+    <string name="noun">Noun</string>
+    <string name="verb">Verb</string>
+    <string name="other">Other</string>
 </resources>
