@@ -58,13 +58,35 @@
     </com.google.android.material.button.MaterialButtonToggleGroup>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/wordTextLayout"
-        android:layout_width="match_parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:id="@+id/articleTextLayout"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:hint="@string/article"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:layout_constraintEnd_toStartOf="@id/nounTextLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/nounTextLayout">
+
+        <AutoCompleteTextView
+            android:id="@+id/articleDropdown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            tools:ignore="LabelFor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nounTextLayout"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="24dp"
-        android:hint="@string/word"
+        android:hint="@string/noun"
         app:boxBackgroundColor="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/articleTextLayout"
         app:layout_constraintTop_toBottomOf="@id/wordTypeButtonGroup">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -80,7 +102,7 @@
         android:layout_marginTop="24dp"
         android:hint="@string/meaning"
         app:boxBackgroundColor="@android:color/transparent"
-        app:layout_constraintTop_toBottomOf="@id/wordTextLayout">
+        app:layout_constraintTop_toBottomOf="@id/nounTextLayout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
