@@ -12,6 +12,7 @@ import com.google.android.material.button.MaterialButton;
 public class NewWordActivity
     extends AppCompatActivity
 {
+
     private MaterialButton nounButton;
 
     @Override
@@ -41,4 +42,5 @@ public class NewWordActivity
     public void otherButtonAction(View view)
     {
     }
+
 }

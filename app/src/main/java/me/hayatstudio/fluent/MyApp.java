@@ -13,6 +13,7 @@ import org.acra.data.StringFormat;
 public class MyApp
     extends Application
 {
+
     @Override
     protected void attachBaseContext(Context base)
     {
@@ -35,4 +36,5 @@ public class MyApp
             .withSubject("Fluent App");
         ACRA.init(this, confbuilder);
     }
+
 }
