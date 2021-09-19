@@ -13,8 +13,6 @@ public class NewWordActivity
     extends AppCompatActivity
 {
 
-    private MaterialButton nounButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -27,7 +25,7 @@ public class NewWordActivity
             new String[] {"der", "das", "die"});
         articleDropdown.setAdapter(articleAdapter);
 
-        nounButton = findViewById(R.id.nounButton);
+        MaterialButton nounButton = findViewById(R.id.nounButton);
         nounButton.setChecked(true);
     }
 
