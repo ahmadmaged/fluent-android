@@ -2,8 +2,10 @@ package me.hayatstudio.fluent;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,6 +26,22 @@ public class NewWordActivity
             android.R.layout.simple_dropdown_item_1line,
             new String[] {"der", "das", "die"});
         articleDropdown.setAdapter(articleAdapter);
+
+        TextView genderTextView = findViewById(R.id.genderTextView);
+        articleDropdown.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+            {
+                if (id == 0)
+                    genderTextView.setText(R.string.gender_masc);
+                else if (id == 1)
+                    genderTextView.setText(R.string.gender_neut);
+                else if (id == 2)
+                    genderTextView.setText(R.string.gender_fem);
+            }
+        });
+        genderTextView.setFirstBaselineToTopHeight(
+            articleDropdown.getFirstBaselineToTopHeight());
 
         MaterialButton nounButton = findViewById(R.id.nounButton);
         nounButton.setChecked(true);

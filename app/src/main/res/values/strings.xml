@@ -11,4 +11,7 @@
     <string name="noun">Noun</string>
     <string name="verb">Verb</string>
     <string name="other">Other</string>
+    <string name="gender_fem">Feminine</string>
+    <string name="gender_masc">Masculine</string>
+    <string name="gender_neut">Neuter</string>
 </resources>
