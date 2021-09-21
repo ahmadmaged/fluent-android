@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_new_word.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/add_noun.xml" value="0.2" />
       </map>
     </option>
   </component>
