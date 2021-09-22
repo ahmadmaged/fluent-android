@@ -18,22 +18,23 @@ public class MyApp
     protected void attachBaseContext(Context base)
     {
         super.attachBaseContext(base);
-        // ACRA core config
+
+        // configure ACRA crash reporting
         CoreConfigurationBuilder confbuilder = new CoreConfigurationBuilder(this);
         confbuilder
             .withBuildConfigClass(BuildConfig.class)
             .withReportFormat(StringFormat.KEY_VALUE_LIST);
-        // ACRA Toast plugin config
         confbuilder.getPluginConfigurationBuilder(ToastConfigurationBuilder.class)
             .withEnabled(true)
-            .withResText(R.string.crash_message)
+            .withResText(R.string.acra_crash_message)
             .withLength(Toast.LENGTH_LONG);
-        // ACRA Mail plugin config
         confbuilder.getPluginConfigurationBuilder(MailSenderConfigurationBuilder.class)
             .withEnabled(true)
             .withReportAsFile(true)
-            .withReportFileName("crash_report.txt")
-            .withSubject("Fluent App");
+            .withReportFileName(getString(R.string.acra_filename))
+            .withMailTo(getString(R.string.acra_email_address))
+            .withSubject(getString(R.string.acra_email_subject))
+            .withBody(getString(R.string.acra_email_body));
         ACRA.init(this, confbuilder);
     }
 
