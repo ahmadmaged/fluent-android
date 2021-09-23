@@ -21,13 +21,13 @@ public class NewWordActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_word);
 
-        AutoCompleteTextView articleDropdown = findViewById(R.id.articleDropdown);
+        AutoCompleteTextView articleDropdown = findViewById(R.id.anArticleDropdown);
         ArrayAdapter<String> articleAdapter = new ArrayAdapter<>(this,
             android.R.layout.simple_dropdown_item_1line,
             new String[] {"der", "das", "die"});
         articleDropdown.setAdapter(articleAdapter);
 
-        TextView genderTextView = findViewById(R.id.genderTextView);
+        TextView genderTextView = findViewById(R.id.anGenderTextView);
         articleDropdown.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id)

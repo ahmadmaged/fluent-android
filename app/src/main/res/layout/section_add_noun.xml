@@ -9,19 +9,19 @@
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
-        android:id="@+id/articleTextLayout"
+        android:id="@+id/anArticleTextLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="24dp"
         android:hint="@string/article"
         app:boxBackgroundColor="@android:color/transparent"
-        app:layout_constraintEnd_toStartOf="@id/genderTextView"
+        app:layout_constraintEnd_toStartOf="@id/anGenderTextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <AutoCompleteTextView
-            android:id="@+id/articleDropdown"
+            android:id="@+id/anArticleDropdown"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="none"
@@ -29,18 +29,18 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/genderTextView"
+        android:id="@+id/anGenderTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:textSize="16sp"
         app:boxBackgroundColor="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/articleTextLayout"
-        app:layout_constraintTop_toTopOf="@id/articleTextLayout" />
+        app:layout_constraintStart_toEndOf="@id/anArticleTextLayout"
+        app:layout_constraintTop_toTopOf="@id/anArticleTextLayout" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nounTextLayout"
+        android:id="@+id/anNounTextLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
@@ -49,7 +49,7 @@
         app:boxBackgroundColor="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/articleTextLayout">
+        app:layout_constraintTop_toBottomOf="@id/anArticleTextLayout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -57,7 +57,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/pluralTextLayout"
+        android:id="@+id/anPluralTextLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
@@ -66,7 +66,7 @@
         app:boxBackgroundColor="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nounTextLayout">
+        app:layout_constraintTop_toBottomOf="@id/anNounTextLayout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -74,7 +74,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/meaningTextLayout"
+        android:id="@+id/anMeaningTextLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
@@ -83,7 +83,7 @@
         app:boxBackgroundColor="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pluralTextLayout">
+        app:layout_constraintTop_toBottomOf="@id/anPluralTextLayout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -91,7 +91,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/sampleTextLayout"
+        android:id="@+id/anSampleTextLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
@@ -100,7 +100,7 @@
         app:boxBackgroundColor="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/meaningTextLayout">
+        app:layout_constraintTop_toBottomOf="@id/anMeaningTextLayout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
