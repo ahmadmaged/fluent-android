@@ -60,7 +60,7 @@
     </com.google.android.material.button.MaterialButtonToggleGroup>
 
     <include
-        layout="@layout/add_noun"
+        layout="@layout/section_add_noun"
         android:id="@+id/addNounLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
