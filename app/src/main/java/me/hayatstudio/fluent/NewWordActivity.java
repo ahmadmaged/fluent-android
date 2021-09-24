@@ -8,6 +8,8 @@ import android.widget.AutoCompleteTextView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.ConstraintSet;
 
 import com.google.android.material.button.MaterialButton;
 
@@ -15,11 +17,18 @@ public class NewWordActivity
     extends AppCompatActivity
 {
 
+    ConstraintLayout layout;
+    ConstraintSet constraints;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_word);
+
+        layout = findViewById(R.id.root);
+        constraints = new ConstraintSet();
+        constraints.clone(layout);
 
         AutoCompleteTextView articleDropdown = findViewById(R.id.anArticleDropdown);
         ArrayAdapter<String> articleAdapter = new ArrayAdapter<>(this,
@@ -45,10 +54,14 @@ public class NewWordActivity
 
         MaterialButton nounButton = findViewById(R.id.nounButton);
         nounButton.setChecked(true);
+        nounButtonAction(null);
     }
 
     public void nounButtonAction(View view)
     {
+        constraints.connect(R.id.addWordButton, ConstraintSet.TOP,
+                R.id.anSampleTextLayout, ConstraintSet.BOTTOM);
+        constraints.applyTo(layout);
     }
 
     public void verbButtonAction(View view)
