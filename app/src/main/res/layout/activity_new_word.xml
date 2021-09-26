@@ -63,6 +63,9 @@
     <include
         layout="@layout/section_add_noun" />
 
+    <include
+        layout="@layout/section_add_verb" />
+
     <Button
         android:id="@+id/addWordButton"
         android:layout_width="wrap_content"

@@ -19,6 +19,7 @@ public class NewWordActivity
 
     ConstraintLayout layout;
     ConstraintSet constraints;
+    int activeGroup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -59,17 +60,28 @@ public class NewWordActivity
 
     public void nounButtonAction(View view)
     {
-        constraints.connect(R.id.addWordButton, ConstraintSet.TOP,
-                R.id.anSampleTextLayout, ConstraintSet.BOTTOM);
-        constraints.applyTo(layout);
+        showGroup(R.id.nounGroup, R.id.anSampleTextLayout);
     }
 
     public void verbButtonAction(View view)
     {
+        showGroup(R.id.verbGroup, R.id.avVerbTextLayout);
     }
 
     public void otherButtonAction(View view)
     {
+    }
+
+    private void showGroup(int groupId, int bottomViewId)
+    {
+        if (activeGroup == groupId) return;
+        if (activeGroup != 0)
+            constraints.setVisibility(activeGroup, ConstraintSet.GONE);
+        constraints.setVisibility(groupId, ConstraintSet.VISIBLE);
+        constraints.connect(R.id.addWordButton, ConstraintSet.TOP,
+            bottomViewId, ConstraintSet.BOTTOM);
+        constraints.applyTo(layout);
+        activeGroup = groupId;
     }
 
 }
