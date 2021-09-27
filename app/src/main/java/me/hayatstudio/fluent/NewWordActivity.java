@@ -14,7 +14,7 @@ import androidx.constraintlayout.widget.ConstraintSet;
 import com.google.android.material.button.MaterialButton;
 
 public class NewWordActivity
-    extends AppCompatActivity
+        extends AppCompatActivity
 {
 
     ConstraintLayout layout;
@@ -33,8 +33,8 @@ public class NewWordActivity
 
         AutoCompleteTextView articleDropdown = findViewById(R.id.anArticleDropdown);
         ArrayAdapter<String> articleAdapter = new ArrayAdapter<>(this,
-            android.R.layout.simple_dropdown_item_1line,
-            new String[] {"der", "das", "die"});
+                android.R.layout.simple_dropdown_item_1line,
+                new String[] {"der", "das", "die"});
         articleDropdown.setAdapter(articleAdapter);
 
         TextView genderTextView = findViewById(R.id.anGenderTextView);
@@ -51,7 +51,7 @@ public class NewWordActivity
             }
         });
         genderTextView.setFirstBaselineToTopHeight(
-            articleDropdown.getFirstBaselineToTopHeight());
+                articleDropdown.getFirstBaselineToTopHeight());
 
         MaterialButton nounButton = findViewById(R.id.nounButton);
         nounButton.setChecked(true);
@@ -79,7 +79,7 @@ public class NewWordActivity
             constraints.setVisibility(activeGroup, ConstraintSet.GONE);
         constraints.setVisibility(groupId, ConstraintSet.VISIBLE);
         constraints.connect(R.id.addWordButton, ConstraintSet.TOP,
-            bottomViewId, ConstraintSet.BOTTOM);
+                bottomViewId, ConstraintSet.BOTTOM);
         constraints.applyTo(layout);
         activeGroup = groupId;
     }

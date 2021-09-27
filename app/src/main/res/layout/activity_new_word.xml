@@ -60,11 +60,9 @@
             android:text="@string/other" />
     </com.google.android.material.button.MaterialButtonToggleGroup>
 
-    <include
-        layout="@layout/section_add_noun" />
+    <include layout="@layout/section_add_noun" />
 
-    <include
-        layout="@layout/section_add_verb" />
+    <include layout="@layout/section_add_verb" />
 
     <Button
         android:id="@+id/addWordButton"

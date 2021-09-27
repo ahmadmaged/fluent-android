@@ -11,7 +11,7 @@ import org.acra.config.ToastConfigurationBuilder;
 import org.acra.data.StringFormat;
 
 public class MyApp
-    extends Application
+        extends Application
 {
 
     @Override
@@ -22,19 +22,21 @@ public class MyApp
         // configure ACRA crash reporting
         CoreConfigurationBuilder confbuilder = new CoreConfigurationBuilder(this);
         confbuilder
-            .withBuildConfigClass(BuildConfig.class)
-            .withReportFormat(StringFormat.KEY_VALUE_LIST);
-        confbuilder.getPluginConfigurationBuilder(ToastConfigurationBuilder.class)
-            .withEnabled(true)
-            .withResText(R.string.acra_crash_message)
-            .withLength(Toast.LENGTH_LONG);
-        confbuilder.getPluginConfigurationBuilder(MailSenderConfigurationBuilder.class)
-            .withEnabled(true)
-            .withReportAsFile(true)
-            .withReportFileName(getString(R.string.acra_filename))
-            .withMailTo(getString(R.string.acra_email_address))
-            .withSubject(getString(R.string.acra_email_subject))
-            .withBody(getString(R.string.acra_email_body));
+                .withBuildConfigClass(BuildConfig.class)
+                .withReportFormat(StringFormat.KEY_VALUE_LIST);
+        confbuilder
+                .getPluginConfigurationBuilder(ToastConfigurationBuilder.class)
+                .withEnabled(true)
+                .withResText(R.string.acra_crash_message)
+                .withLength(Toast.LENGTH_LONG);
+        confbuilder
+                .getPluginConfigurationBuilder(MailSenderConfigurationBuilder.class)
+                .withEnabled(true)
+                .withReportAsFile(true)
+                .withReportFileName(getString(R.string.acra_filename))
+                .withMailTo(getString(R.string.acra_email_address))
+                .withSubject(getString(R.string.acra_email_subject))
+                .withBody(getString(R.string.acra_email_body));
         ACRA.init(this, confbuilder);
     }
 
