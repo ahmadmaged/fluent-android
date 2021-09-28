@@ -90,12 +90,12 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/anSampleTextLayout"
+        android:id="@+id/anExampleTextLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="24dp"
-        android:hint="@string/sample"
+        android:hint="@string/example"
         app:boxBackgroundColor="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -112,6 +112,6 @@
         android:layout_height="wrap_content"
         android:visibility="gone"
         app:constraint_referenced_ids="anArticleTextLayout,anGenderTextView,
-            anNounTextLayout,anPluralTextLayout,anMeaningTextLayout,anSampleTextLayout" />
+            anNounTextLayout,anPluralTextLayout,anMeaningTextLayout,anExampleTextLayout" />
 
 </merge>

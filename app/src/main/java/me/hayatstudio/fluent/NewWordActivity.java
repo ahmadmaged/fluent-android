@@ -60,7 +60,7 @@ public class NewWordActivity
 
     public void nounButtonAction(View view)
     {
-        showGroup(R.id.nounGroup, R.id.anSampleTextLayout);
+        showGroup(R.id.nounGroup, R.id.anExampleTextLayout);
     }
 
     public void verbButtonAction(View view)
