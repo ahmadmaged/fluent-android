@@ -60,26 +60,24 @@ public class NewWordActivity
 
     public void nounButtonAction(View view)
     {
-        showGroup(R.id.nounGroup, R.id.anExampleTextLayout);
+        showGroup(R.id.nounGroup);
     }
 
     public void verbButtonAction(View view)
     {
-        showGroup(R.id.verbGroup, R.id.avVerbTextLayout);
+        showGroup(R.id.verbGroup);
     }
 
     public void otherButtonAction(View view)
     {
     }
 
-    private void showGroup(int groupId, int bottomViewId)
+    private void showGroup(int groupId)
     {
         if (activeGroup == groupId) return;
         if (activeGroup != 0)
             constraints.setVisibility(activeGroup, ConstraintSet.GONE);
         constraints.setVisibility(groupId, ConstraintSet.VISIBLE);
-        constraints.connect(R.id.addWordButton, ConstraintSet.TOP,
-                bottomViewId, ConstraintSet.BOTTOM);
         constraints.applyTo(layout);
         activeGroup = groupId;
     }
